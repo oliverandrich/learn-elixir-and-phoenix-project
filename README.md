@@ -8,7 +8,7 @@ During this project I plan to develop a simple read-it-later service, which migh
 
 ## Tags and blog posts
 
--
+- [01 Project Setup](https://dev.to/oliverandrich/learn-elixir-and-phoenix-by-building-a-read-it-later-service-project-setup-3d1c)
 
 ## License
 
