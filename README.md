@@ -1,20 +1,15 @@
-# ReadItLater
+# Read It Later
 
-To start your Phoenix server:
+This is the source code of my little Elixir and Phoenix learning project, I use in my blog post series on [dev.to](https://dev.to/), where I learn this technologies in public.
 
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.setup`
-  * Install Node.js dependencies with `npm install` inside the `assets` directory
-  * Start Phoenix endpoint with `mix phx.server`
+Every tag of this projects corresponds to what I have wrote about in the individual blog posts.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+During this project I plan to develop a simple read-it-later service, which might later on evolve into a full fledged solution I enjoy to use. But this is the scope of a different project.
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+## Tags and blog posts
 
-## Learn more
+-
 
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+## License
+
+This project is licensed under the MIT license.
