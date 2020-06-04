@@ -1,0 +1,34 @@
+defmodule ReadItLater.Application do
+  # See https://hexdocs.pm/elixir/Application.html
+  # for more information on OTP Applications
+  @moduledoc false
+
+  use Application
+
+  def start(_type, _args) do
+    children = [
+      # Start the Ecto repository
+      ReadItLater.Repo,
+      # Start the Telemetry supervisor
+      ReadItLaterWeb.Telemetry,
+      # Start the PubSub system
+      {Phoenix.PubSub, name: ReadItLater.PubSub},
+      # Start the Endpoint (http/https)
+      ReadItLaterWeb.Endpoint
+      # Start a worker by calling: ReadItLater.Worker.start_link(arg)
+      # {ReadItLater.Worker, arg}
+    ]
+
+    # See https://hexdocs.pm/elixir/Supervisor.html
+    # for other strategies and supported options
+    opts = [strategy: :one_for_one, name: ReadItLater.Supervisor]
+    Supervisor.start_link(children, opts)
+  end
+
+  # Tell Phoenix to update the endpoint configuration
+  # whenever the application is updated.
+  def config_change(changed, _new, removed) do
+    ReadItLaterWeb.Endpoint.config_change(changed, removed)
+    :ok
+  end
+end
