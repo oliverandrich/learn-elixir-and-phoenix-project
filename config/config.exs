@@ -13,10 +13,10 @@ config :read_it_later,
 # Configures the endpoint
 config :read_it_later, ReadItLaterWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "0J69zRL8FjuCR1286ueCDUQXzTLd9NvZNyXaObVla2M+LlZIasrKglo/UtUIw1Mi",
+  secret_key_base: "bv7u6g+eRjOwzHBrabilVGUyH68i3yfvPv1Z3b7QNhAN1wsLA7d2a98fQiKNrHYQ",
   render_errors: [view: ReadItLaterWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: ReadItLater.PubSub,
-  live_view: [signing_salt: "Q8FKjBOE"]
+  live_view: [signing_salt: "KtfGNxCr"]
 
 # Configures Elixir's Logger
 config :logger, :console,

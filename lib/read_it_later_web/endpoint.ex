@@ -7,7 +7,7 @@ defmodule ReadItLaterWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_read_it_later_key",
-    signing_salt: "KKQc0Evz"
+    signing_salt: "DQEnk37s"
   ]
 
   socket "/socket", ReadItLaterWeb.UserSocket,
