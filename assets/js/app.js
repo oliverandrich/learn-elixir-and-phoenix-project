@@ -13,3 +13,16 @@ import "../css/app.css";
 //     import socket from "./socket"
 //
 import "phoenix_html";
+
+// Listener to automatically detect dark mode. Required for
+// tailwindcss-dark-mode.
+const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+const handler = () => {
+  if (mediaQuery.matches) {
+    document.documentElement.classList.add("mode-dark");
+  } else {
+    document.documentElement.classList.remove("mode-dark");
+  }
+};
+mediaQuery.addListener(handler);
+handler();

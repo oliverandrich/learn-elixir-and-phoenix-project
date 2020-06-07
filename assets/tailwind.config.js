@@ -19,6 +19,8 @@ module.exports = {
     display: ["responsive", "empty"],
   },
   plugins: [
+    require("tailwindcss-dark-mode")(),
+    require("@tailwindcss/custom-forms"),
     plugin(function ({ addVariant, e }) {
       addVariant("empty", ({ modifySelectors, separator }) => {
         modifySelectors(({ className }) => {
