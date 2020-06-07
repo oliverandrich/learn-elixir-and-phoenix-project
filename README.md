@@ -22,7 +22,8 @@ mix phx.server
 
 ## Tags and blog posts
 
-- [01 Project Setup](https://dev.to/oliverandrich/learn-elixir-and-phoenix-by-building-a-read-it-later-service-project-setup-3d1c)
+- [01-Project-Setup](https://dev.to/oliverandrich/learn-elixir-and-phoenix-by-building-a-read-it-later-service-project-setup-3d1c)
+- [02-Add-Tailwind-CSS-to-the-project](https://dev.to/oliverandrich/learn-elixir-and-phoenix-add-tailwind-css-to-the-project-4fkf)
 
 ## License
 

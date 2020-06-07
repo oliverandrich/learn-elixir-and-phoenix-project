@@ -1,0 +1,14 @@
+@tailwind base;
+
+a {
+  @apply text-blue-600;
+}
+
+a:hover,
+a:focus {
+  @apply text-gray-600;
+}
+
+@tailwind components;
+
+@tailwind utilities;
