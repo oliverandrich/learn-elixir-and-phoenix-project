@@ -2,6 +2,7 @@
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
 import "../css/app.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 // webpack automatically bundles all modules in your
 // entry points. Those entry points can be configured
