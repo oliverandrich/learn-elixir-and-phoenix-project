@@ -1,0 +1,13 @@
+/*
+  This file contains custom base styles for html elements.
+
+  See: https://tailwindcss.com/docs/adding-base-styles
+*/
+
+a {
+  @apply text-blue-500;
+
+  &:hover {
+    @apply text-gray-500;
+  }
+}
