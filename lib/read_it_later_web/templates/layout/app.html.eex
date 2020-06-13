@@ -4,30 +4,11 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ReadItLater · Phoenix Framework</title>
+    <title>Reading List</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
-  <body>
-    <header class="bg-gray-100 border-b border-gray-200 mb-5">
-      <section class="max-w-4xl mx-auto px-5 flex flex-col md:flex-row items-center jusify-between">
-        <nav role="navigation" class="order-2">
-          <ul class="mx-3 mb-3 md:mt-3 text-right">
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-            <%= if function_exported?(Routes, :live_dashboard_path, 2) do %>
-              <li><%= link "LiveDashboard", to: Routes.live_dashboard_path(@conn, :home) %></li>
-            <% end %>
-          </ul>
-        </nav>
-        <a href="https://phoenixframework.org/" class="m-3 md:my-5 order-1">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo" class="w-4/5"/>
-        </a>
-      </section>
-    </header>
-    <main role="main" class="max-w-4xl mx-auto px-5">
-      <p class="empty:hidden p-4 mb-5 border rounded border-blue-500 bg-blue-100 text-blue-700" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="empty:hidden p-4 mb-5 border rounded border-red-500 bg-red-100 text-red-700" role="alert"><%= get_flash(@conn, :error) %></p>
-      <%= @inner_content %>
-    </main>
+  <body class="bg-white dark:bg-black">
+    <%= @inner_content %>
   </body>
 </html>

@@ -5,11 +5,19 @@
 */
 
 .btn {
-  @apply font-bold py-2 px-4 rounded;
+  @apply font-semibold py-2 px-5 rounded;
+}
+
+.btn-text {
+  @apply text-blue-600;
+
+  &:hover {
+    @apply text-gray-900;
+  }
 }
 
 .btn-primary {
-  @apply bg-blue-500 text-white;
+  @apply bg-blue-600 text-white;
 
   &:hover {
     @apply bg-blue-700;
@@ -17,9 +25,9 @@
 }
 
 .btn-secondary {
-  @apply bg-gray-400 text-gray-800;
+  @apply bg-gray-300 text-gray-800;
 
   &:hover {
-    @apply bg-gray-500;
+    @apply bg-gray-400;
   }
 }

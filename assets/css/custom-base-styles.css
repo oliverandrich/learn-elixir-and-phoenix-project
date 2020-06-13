@@ -4,10 +4,22 @@
   See: https://tailwindcss.com/docs/adding-base-styles
 */
 
+h2 {
+  @apply text-xl font-bold;
+}
+
+p {
+  @apply mt-4;
+
+  &:first-child {
+    @apply mt-0;
+  }
+}
+
 a {
-  @apply text-blue-500;
+  @apply text-blue-600;
 
   &:hover {
-    @apply text-gray-500;
+    @apply text-gray-900;
   }
 }
