@@ -1,4 +1,4 @@
-# Read It Later
+# Reading List
 
 This is the source code of my little Elixir and Phoenix learning project, I use in my blog post series on [dev.to](https://dev.to/), where I learn this technologies in public.
 
