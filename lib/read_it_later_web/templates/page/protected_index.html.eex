@@ -1,0 +1,3 @@
+<section class="flex flex-grow justify-center items-center">
+  <h1 class="text-6xl text-green-600">Protected Page</h1>
+</section>

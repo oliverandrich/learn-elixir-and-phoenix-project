@@ -8,11 +8,11 @@ During this project I plan to develop a simple read-it-later service, which migh
 
 ## Getting started
 
-I assume that you have installed the required components (Elixir, Phoenix, Node and PostgreSQL) as described in my first [post](https://dev.to/oliverandrich/learn-elixir-and-phoenix-by-building-a-read-it-later-service-project-setup-3d1c).
+I assume that you have installed the required components (Elixir, Phoenix, Node and PostgreSQL) as described in my first [post](https://andrich.me/learn-elixir-and-phoenix-project-setup).
 
 ```bash
-git clone git@github.com:oliverandrich/learn-elixir-and-phoenix-project.git read_it_later
-cd read_it_later
+git clone git@github.com:oliverandrich/learn-elixir-and-phoenix-project.git reading_list
+cd reading_list
 mix deps.get
 cd assets
 npm install
@@ -22,8 +22,9 @@ mix phx.server
 
 ## Tags and blog posts
 
-- [01-Project-Setup](https://dev.to/oliverandrich/learn-elixir-and-phoenix-by-building-a-read-it-later-service-project-setup-3d1c)
-- [02-Add-Tailwind-CSS-to-the-project](https://dev.to/oliverandrich/learn-elixir-and-phoenix-add-tailwind-css-to-the-project-4fkf)
+- [01-Project-Setup](https://andrich.me/learn-elixir-and-phoenix-project-setup)
+- [02-Add-Tailwind-CSS-to-the-project](https://andrich.me/learn-elixir-and-phoenix-add-tailwind-css)
+- [03-Add-Authentication](https://andrich.me/learn-elixir-and-phoenix-add-authentication)
 
 ## License
 

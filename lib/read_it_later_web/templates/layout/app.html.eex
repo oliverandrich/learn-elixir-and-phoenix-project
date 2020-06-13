@@ -8,7 +8,43 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
     <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
-  <body class="bg-white dark:bg-black">
-    <%= @inner_content %>
+  <body class="bg-white dark:bg-black min-h-screen flex flex-col">
+    <header class="bg-white bg-opacity-75 sticky top-0">
+      <div class="container flex flex-row items-center py-4">
+        <h1 class="flex-grow font-bold text-3xl">
+          <%= link to: Routes.page_path(@conn, :index), class: "text-black" do %>
+            <i class="fas fa-book-reader mr-2"></i>
+            Reading List
+          <% end %>
+        </h1>
+        <%= if Pow.Plug.current_user(@conn)  do %>
+          <div><%= @current_user.email %></div>
+          <%= link "Log out",
+            to: Routes.pow_session_path(@conn, :delete),
+            method: :delete,
+            class: "btn btn-text" %>
+        <% else %>
+          <%= link "Sign in",
+            to: Routes.pow_session_path(@conn, :new),
+            class: "btn btn-text" %>
+        <% end %>
+      </div>
+    </header>
+    <div class="flex-grow flex flex-col">
+      <%= @inner_content %>
+    </div>
+    <footer class="bg-black text-white">
+      <div class="container flex flex-row justify-between items-center py-4">
+        <div>&copy; 2020 Oliver Andrich</div>
+        <div>
+          <a href="https://twitter.com/oliverandrich" class="text-white hover:text-blue-600">
+            <i class="fab fa-twitter text-3xl mx-1"></i>
+          </a>
+          <a href="https://github.com/oliverandrich" class="text-white hover:text-blue-600">
+            <i class="fab fa-github text-3xl mx-1"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

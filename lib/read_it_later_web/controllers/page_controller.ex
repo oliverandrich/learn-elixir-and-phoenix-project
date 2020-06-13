@@ -4,4 +4,8 @@ defmodule ReadItLaterWeb.PageController do
   def index(conn, _params) do
     render(conn, "index.html")
   end
+
+  def protected_index(conn, _params) do
+    render(conn, "protected_index.html")
+  end
 end

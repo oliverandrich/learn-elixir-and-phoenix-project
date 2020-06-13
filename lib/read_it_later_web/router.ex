@@ -1,5 +1,9 @@
 defmodule ReadItLaterWeb.Router do
   use ReadItLaterWeb, :router
+  use Pow.Phoenix.Router
+
+  use Pow.Extension.Phoenix.Router,
+    extensions: [PowResetPassword, PowEmailConfirmation]
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -9,14 +13,32 @@ defmodule ReadItLaterWeb.Router do
     plug :put_secure_browser_headers
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
+  # pipeline :api do
+  #   plug :accepts, ["json"]
+  # end
+
+  pipeline :protected do
+    plug Pow.Plug.RequireAuthenticated,
+      error_handler: Pow.Phoenix.PlugErrorHandler
+  end
+
+  scope "/" do
+    pipe_through :browser
+
+    pow_routes()
+    pow_extension_routes()
   end
 
   scope "/", ReadItLaterWeb do
     pipe_through :browser
 
     get "/", PageController, :index
+  end
+
+  scope "/protected", ReadItLaterWeb do
+    pipe_through [:browser, :protected]
+
+    get "/", PageController, :protected_index
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,44 @@
+<div class="bg-local bg-cover bg-center flex-grow flex items-center justify-center"
+  style="background-image: url(/images/bookshelf.jpg)">
+  <div class="bg-white shadow-lg rounded-lg px-10 py-8 w-4/5 lg:w-1/3">
+    <h1 class="text-center mb-4">Sign up to Reading List</h1>
+
+    <%= form_for @changeset, @action, [as: :user], fn f -> %>
+      <%= if @changeset.action do %>
+        <div class="alert alert-danger">
+          <p>Oops, something went wrong! Please check the errors below.</p>
+        </div>
+      <% end %>
+
+      <div class="form-group">
+        <%= label f, Pow.Ecto.Schema.user_id_field(@changeset), class: "form-label" %>
+        <%= text_input f, Pow.Ecto.Schema.user_id_field(@changeset), class: "form-control" %>
+        <%= error_tag f, Pow.Ecto.Schema.user_id_field(@changeset) %>
+      </div>
+
+      <div class="form-group">
+        <%= label f, :password, class: "form-label" %>
+        <%= password_input f, :password, class: "form-control" %>
+        <%= error_tag f, :password %>
+      </div>
+
+      <div class="form-group">
+        <%= label f, :password_confirmation, class: "form-label" %>
+        <%= password_input f, :password_confirmation, class: "form-control" %>
+        <%= error_tag f, :password_confirmation %>
+      </div>
+
+      <div>
+        <%= submit "Sign up", class: "btn btn-primary btn-large w-full mt-4" %>
+      </div>
+    <% end %>
+
+    <p class="text-gray-700 text-xs">
+      By clicking “Sign up”, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Statement</a>. We’ll occasionally send you account related emails.
+    </p>
+    <p class="text-center text-sm">
+      Already have an account?
+      <%= link "Sign in", to: Routes.pow_session_path(@conn, :new) %>
+    </p>
+  </div>
+</div>

@@ -26,6 +26,16 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+config :read_it_later, :pow,
+  user: ReadItLater.Users.User,
+  repo: ReadItLater.Repo,
+  extensions: [PowResetPassword, PowEmailConfirmation],
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
+  web_module: ReadItLaterWeb,
+  mailer_backend: ReadItLaterWeb.Pow.Mailer,
+  web_module_mailer: ReadItLaterWeb,
+  routes_backend: ReadItLaterWeb.Pow.Routes
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

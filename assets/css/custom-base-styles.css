@@ -4,6 +4,10 @@
   See: https://tailwindcss.com/docs/adding-base-styles
 */
 
+h1 {
+  @apply text-2xl font-bold;
+}
+
 h2 {
   @apply text-xl font-bold;
 }
